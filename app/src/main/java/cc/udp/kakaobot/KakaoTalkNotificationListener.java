@@ -44,7 +44,7 @@ public class KakaoTalkNotificationListener extends NotificationListenerService {
                 } catch (Exception e) {
 //                    e.printStackTrace();
                 }
-            } else {
+            } else if (text.toString().startsWith("!")) {
                 sendReply(text.toString(),  sbn);
             }
         }
